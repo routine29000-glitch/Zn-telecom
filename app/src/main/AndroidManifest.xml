@@ -1,1 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <application
+        android:name=".ZnApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/zn_logo"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.ZNTelecom"
+        android:usesCleartextTraffic="false">
+
+        <!-- AdMob App ID -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9392444505692363~1078385743" />
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ZNTelecom.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.SelectionActivity" android:exported="false" />
+        <activity android:name=".ui.PhoneNumberActivity" android:exported="false" />
+        <activity android:name=".ui.OtpActivity" android:exported="false" />
+        <activity android:name=".ui.ActivationActivity" android:exported="false" />
+
+        <receiver
+            android:name=".service.SmsCodeReceiver"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Accessibility Service used ONLY to read the on-screen USSD menu
+             (opened by the system dialer after dialing #500#) and tap the
+             same option a user would tap by hand. It does not call any
+             private/internal API and does not bypass any verification step. -->
+        <service
+            android:name=".service.OperatorAccessibilityService"
+            android:exported="false"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+    </application>
+</manifest>
