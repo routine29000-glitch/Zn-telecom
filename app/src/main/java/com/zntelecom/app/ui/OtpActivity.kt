@@ -55,7 +55,7 @@ class OtpActivity : AppCompatActivity() {
     }
 
     private fun requestSmsPermissionsIfNeeded() {
-        val needed = arrayOf(Manifest.permission.RECEIVE_SMS, Manifest.permission.READ_SMS)
+        val needed = arrayOf(Manifest.permission.RECEIVE_SMS)
         val notGranted = needed.filter {
             ContextCompat.checkSelfPermission(this, it) != PackageManager.PERMISSION_GRANTED
         }
