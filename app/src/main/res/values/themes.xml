@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.ZNTelecom" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/zn_gold</item>
+        <item name="colorPrimaryDark">@color/zn_black</item>
+        <item name="colorAccent">@color/zn_red</item>
+        <item name="android:windowBackground">@color/zn_black</item>
+        <item name="android:textColorPrimary">@color/zn_white</item>
+    </style>
+
+    <style name="Theme.ZNTelecom.Splash" parent="Theme.ZNTelecom">
+        <item name="android:windowBackground">@color/zn_black</item>
+        <item name="android:statusBarColor">@color/zn_black</item>
+    </style>
+
+    <style name="ZnButton.Red">
+        <item name="android:background">@drawable/bg_button_red</item>
+        <item name="android:textColor">@color/zn_white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="ZnButton.Gold">
+        <item name="android:background">@drawable/bg_button_gold</item>
+        <item name="android:textColor">@color/zn_black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">16dp</item>
+    </style>
+</resources>

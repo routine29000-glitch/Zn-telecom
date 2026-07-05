@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ZN Ooredoo</string>
+    <string name="welcome_title">تفعيل عروض أوريدو</string>
+    <string name="daily_gift">الهدية اليومية</string>
+    <string name="weekly_offers">عروض الإنترنت الأسبوعية</string>
+    <string name="btn_activate_gift">تفعيل الهدية اليومية</string>
+    <string name="btn_browse_offers">تصفح العروض الأسبوعية</string>
+    <string name="enter_phone">أدخل رقم هاتفك</string>
+    <string name="phone_hint">05XXXXXXXX</string>
+    <string name="continue_btn">متابعة</string>
+    <string name="enter_otp">أدخل رمز التحقق</string>
+    <string name="otp_sent">تم إرسال الرمز إلى هاتفك</string>
+    <string name="verify_btn">تفعيل</string>
+    <string name="activating">جاري التفعيل…</string>
+    <string name="activation_success">تم التفعيل بنجاح!</string>
+    <string name="activation_failed">فشل التفعيل، حاول مجدداً</string>
+    <string name="watch_ad_instant">شاهد إعلان قصير للتفعيل الفوري</string>
+    <string name="accessibility_service_description">تساعد هذه الخدمة على قراءة قائمة USSD الخاصة بأوريدو والاختيار التلقائي للخيار المناسب.</string>
+</resources>
